@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="Book store,BookStore,Books,Book,Fictional,Police,Cartoons"><!--the key word of our project -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap">
+<link rel="stylesheet" href="styles.css"><!--import css file -->
+<script src = "script.js"></script> <!--importing javaScript file -->
+</head>
+<body>
+<!--NAVIGATION-->
+       <nav>
+          <img src="images/Logo.png" id="logo" alt="logo"><!-- insert the logo image--> 
+		  <a class="navbarBrand" href="index.html">BookStore</a><!--to display index page after click on BookStore -->
+          <ul>
+              <li><a href="index.html">HOME</a></li><!-- TO GO TO THE HOME PAGE-->
+              <li><a href="Books.html">Books</a></li><!-- TO GO TO BUYING BOOKS-->
+              <li><a href="login.html">Login/Register</a></li><!-- TO GO TO REGISTER/ LOGIN FORM-->
+              <li><a href="ContactUs.html">Contact Us</a></li><!-- TO GO TO FEEDBACK FORM-->
+			  <li><a href="#" class="fa fa-shopping-cart"></a></li><!--cart icon-->
+			  
+          </ul>
+       </nav>
+<!--END OF NAVIGATION-->
+<!--LOGIN-->
+<div class="loginbody" onload="readCookie();">
+<div class="cont">
+<div class="form sign-in">
+<h2>Sign In</h2><!--the label of sign in page -->
+<form name="form" action="#" onsubmit="return LogInVerify(); return setCookie();"><!--start the form to make javaScript-->
+  <label class="label">
+<span>Email Address</span><!--label of email text feild-->
+<input class="input" id="email" type="text" placeholder="example@email.com " name="email" 
+onfocus="focusFunction(this)" onblur="blurFunction(this)"><!--Decleration of email text field that has many properties--> 
+</label><!-- onfocus/onblur these change the background color style of the text box that gets the focus event into yellow background color. Then it gets the normal white background color when it gets the blur -->
+<label class="label">
+<span>Password</span><!--label of password text feild-->
+<input class="input" id="password" type="password" name="password" onfocus="focusFunction(this)" onblur="blurFunction(this)"><!--Decleration of password text field that has many properties-->
+</label><!-- onfocus/onblur these change the background color style of the text box that gets the focus event into yellow background color. Then it gets the normal white background color when it gets the blur -->
+<span id="message" style="padding-left:240px"></span> <!--message that displays the type of error-->
+ <br />
+ <input type="checkbox" name="checkbox" id="checkbox" /> Remember me <br /><!--Decleration of checkbox that has many properties-->
+<input class="submit" type="submit" value="Sign In"><!--submit button to start event and go to the function to handle-->
+    </form><!--the end of the form-->
+	<p class="forgot-pass">Forgot password ?</p>
+</div>
+	
+<!--IMAGE-->
+<div class="sub-cont">
+<div class="image">
+<div class="img-text m-up">
+<!--text in the image -->
+<h2>New here?</h2>
+<p>Sign up and discover great amount of new opportunities!</p>
+</div>
+<div class="img-text m-in">
+<h2>One of us?</h2>
+<p>If you already has an account, just sign in.We've missed you!</p>
+</div>
+<div class="img-btn">
+<!--buttons in the image -->
+<span class="m-in">sign-in</span>
+<span class="m-up">sign-up</span>
+</div>
+</div>
+<!--SIGHNUP-->
+<form name="form2" class="form sign-up" action="#" onsubmit="return SignUpVerify(); return setCookie();"><!--start the form to make javaScript-->
+<h2>sign up</h2> <!--the label of sign up page-->
+<label class="label">
+<span>Name</span><!--the label of name field-->
+<input class="input" type="text" name="name" onfocus="focusFunction(this)" onblur="blurFunction(this)"><!--Decleration of name text field that has many properties--> 
+</label><!-- onfocus/onblur these change the background color style of the text box that gets the focus event into yellow background color. Then it gets the normal white background color when it gets the blur -->
+<label class="label">
+<span>Email</span><!--the label of email field-->
+<input class="input" type="text" name="email" placeholder="example@email.com " onfocus="focusFunction(this)" onblur="blurFunction(this)"> <!--Decleration of email text field that has many properties--> 
+</label><!-- onfocus/onblur these change the background color style of the text box that gets the focus event into yellow background color. Then it gets the normal white background color when it gets the blur -->
+<label class="label">
+<span>Password</span><!--the label of password field-->
+<input class="input" type="password" name="password" onfocus="focusFunction(this)" onblur="blurFunction(this)"><!--Decleration of password text field that has many properties--> 
+</label><!-- onfocus/onblur these change the background color style of the text box that gets the focus event into yellow background color. Then it gets the normal white background color when it gets the blur -->
+<label class="label">
+<span>Confirm Password</span><!--the label of confirm password field-->
+<input class="input" type="password" name="Cpassword" onfocus="focusFunction(this)" onblur="blurFunction(this)"><!--Decleration of password confirmation text field that has many properties--> 
+</label><!-- onfocus/onblur these change the background color style of the text box that gets the focus event into yellow background color. Then it gets the normal white background color when it gets the blur -->
+<span id="message2" style="padding-left:230px"></span> <!--message that displays the type of error-->
+ <br />
+<button type="submit" class="submit">Sign up Now</button><!--submit button to start event and go to the function to handle-->
+</form>
+<!--END SIGHNUP-->
+</div>
+<!-- END IMAGE-->
+</div>
+<!--For Login And SignUp transition-->
+<script>
+document.querySelector('.img-btn').addEventListener('click',function(){ //If the user click on the button make the transition
+	document.querySelector('.cont').classList.toggle('s-signup')
+}
+);</script>
+</div>
+<!--END LOGIN-->
+<!--the footer -->
+<footer>
+       <p>Copyright &copy; 2020 - BookStore</p>
+	   <div class="social-media">
+<ul><!--LIST TO DISPLAY MANY WAYS TO GET IN TOUCH-->
+<li><img src="images/Facebook.png" alt="social media"></li><!--facebook Icon-->
+<li><img src="images/Twitter.png" alt="social media"></li><!--Twitter Icon-->
+<li><img src="images/Instagram.png" alt="social media"></li><!--Instagram Icon-->
+<li><img src="images/LinkedIn.png" alt="social media"><li><!--LinkedIn Icon-->
+</ul>
+</div>
+   </footer><!--End the footer-->
+</body><!--End the body-->
+</html><!--End html page-->
