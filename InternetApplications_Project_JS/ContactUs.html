@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <!---->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Book store,BookStore,Books,Book,Fictional,Police,Cartoons">
+<title>Contact Us</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type = "text/javascript"  src = "script.js" ></script>
+
+</head>
+
+
+<body>
+<!--NAVIGATION-->
+       <nav>
+          <img src="images/Logo.png" id="logo" alt="logo"> <!--IMAGE-->
+		  <a class="navbarBrand" href="index.html">BookStore</a>
+          <ul>
+              <li><a href="index.html">HOME</a></li><!--one of the content in the menue bar--><!-- TO GO TO THE HOME PAGE-->
+              <li><a href="Books.html">Books</a></li><!--one of the content in the menue bar--><!-- TO GO TO BUYING BOOKS-->
+              <li><a href="login.html">Login/Register</a></li><!--one of the content in the menue bar--><!-- TO GO TO REGISTER/ LOGIN FORM-->
+              <li><a href="ContactUs.html">Contact Us</a></li><!--one of the content in the menue bar--><!-- TO GO TO FEEDBACK FORM-->
+			  <li><a href="#" class="fa fa-shopping-cart"></a></li>
+			  
+          </ul>
+       </nav>
+<!--END OF NAVIGATION-->
+<!--TEXT-->
+<div class="textform">
+<h1>Contact Us <img class="mail" src="images/ContactUs.jpg" alt="contact us img"></h1> <!--mail icon-->
+
+<p>Get help 24/7 on social
+Contact support via</p>
+</div>
+ <!--END TEXT-->
+ <!--FORM-->
+<div class="container_form"> container_form+error_message+topic+textform
+ <div class="imagee"> <!--IMAGE div-->
+</div>
+    <div class="col" >
+      		 
+		<span id="error_message" style="padding-left:40px"></span>  <!--message that displays the type of error-->
+      <form name="form" action="#" onsubmit="return validate();"> <!--invokes the function that will be applied once the submittion is done(contains all the cases)-->
+       <div><label class="labell" for="fname">First Name</label> <br> <!--LABEL TO TELL THAT THIS IS THE FIRST NAME FEILD-->
+        <input type="text" id="fname" name="firstname" placeholder="First name "
+		onfocus="this.style.backgroundColor = 'lemonchiffon'; this.style.color = 'blue'; "
+		onblur="this.style.backgroundColor = 'white';">  <!--text feild that has many properties--></div> 
+    <!-- onfocus/onblur these change the background color style of the text box that gets the focus event into yellow background color. Then it gets the normal white background color when it gets the blur -->
+        <div><label class="labell" for="lname">Last Name</label><!--label--> <br>
+        <input type="text" id="lname" name="lastname" placeholder="Last name" 
+		onfocus="this.style.backgroundColor = 'lemonchiffon'; this.style.color = 'blue'; "
+		onblur="this.style.backgroundColor = 'white';"><!--text feild that has many properties--> </div>
+        <div> <label class="labell" for="email">Email Address</label><!--label--> <br>
+          <input id="email" type="text" name="email" placeholder="example@email.com "  
+		  onfocus="this.style.backgroundColor = 'lemonchiffon'; this.style.color = 'blue'; "onblur="this.style.backgroundColor = 'white';"><!--text feild that has many properties--></div>
+      <div><label class="labell" for="topic">How can we help you</label> <br>
+        <select id="topic" name="topic"> <!--label-->
+          <!--subject, list of topics ( Suggestion, Complaint, Idea, Help) in a menu selection-->
+          <option value="suggestion">Suggestion</option> 
+          <option value="complaint">Complaint</option>
+          <option value="idea">Idea</option>
+          <option value="help">Help</option>
+
+        </select> </div> 
+        <br>
+        <label class="labell" for="subject">Subject</label> <br> <!--label-->
+        <textarea id="subject" name="subject" placeholder="Write us a message" onfocus="this.style.backgroundColor = '#FFFFCC'; this.style.color = 'blue'; "
+onblur="this.style.backgroundColor = 'white';"></textarea> <!--text feild that has many properties-->
+       <br><br><br> 
+
+         <button type="submit" value="Submit" class="submitt" >Submit</button>
+      <!--submit button-->
+      </form> <!--END FORM-->
+</div>
+<script>
+document.querySelector('.submitt').addEventListener('click', function()); 
+</script>
+</div>
+
+<footer><!--FOOTER-->
+       <p>Copyright &copy; 2020 - BookStore</p>
+	   <div class="social-media">
+<ul>  <!--LIST TO DISPLAY MANY WAYS TO GET IN TOUCH-->
+<li><img src="images/Facebook.png" alt="social media"></li> <!--FACEBOOK-->
+<li><img src="images/Twitter.png" alt="social media"></li> <!--TWITTER-->
+<li><img src="images/Instagram.png" alt="social media"></li><!--INSTAGRAM-->
+<li><img src="images/LinkedIn.png" alt="social media"><li>
+</ul>
+</div>
+   </footer>
+</body></html>
